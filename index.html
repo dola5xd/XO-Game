@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>X | O Game</title>
+        <link rel="stylesheet" href="./assets/css/output.css"/>
+    </head>
+    <body class="bg-Very_DarkBlue">
+        <main class=" h-[100vh] w-[100vw] relative ">
+            <header class="py-[50px] cursor-default">
+                <div class=" flex justify-center items-center gap-5 max-[525px]:gap-3">
+                    <h1 class="text-[3em] text-green-500 font-bold max-[525px]:text-[2em]">X|O</h1>
+                    <h1 class="text-[3em] text-white max-[525px]:text-[2em]">Game</h1>
+                </div>
+            </header>
+
+            <section id="app" class="flex flex-col justify-center items-center gap-8 ">
+                <div class="info flex justify-between items-center gap-0 cursor-default w-[50vw] max-[525px]:w-[75%] ">
+                    <h1 class="text-[3em] bg-indigo-600 w-[50%] p-[10px] text-left text-white font-bold rounded-l-[7px] max-[525px]:text-[1.5em]">
+                        X=<span class="ml-[5px] " id="x_count">0</span>
+                    </h1>
+                    <h1 class="text-[3em] bg-lightGreen w-[50%] p-[10px] text-right text-white font-bold rounded-r-[7px] max-[525px]:text-[1.5em]">
+                        <span class="mr-[5px]" id="o_count">0</span>=O
+                    </h1>
+                </div>
+                <div class="flex justify-center items-center">
+                    <div class="flex flex-col gap-[15px]">
+                        <div class="row-blocks">
+                            <div data-id="1" class=""></div>
+                            <div data-id="2" class=""></div>
+                            <div data-id="3"></div>
+                        </div>
+                        <div class="row-blocks">
+                            <div data-id="4"></div>
+                            <div data-id="5"></div>
+                            <div data-id="6"></div>
+                        </div>
+                        <div class="row-blocks">
+                            <div data-id="7"></div>
+                            <div data-id="8"></div>
+                            <div data-id="9"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="winner" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-indigo-500 w-[100vw] p-[50px] text-center  flex-col justify-center items-center gap-[10px] font-bold text-white transition-all duration-500  hidden">
+                <h1 class="  text-[3em]"></h1>
+                <button id="next" class="bg-lightGreen rounded-[7px] px-[25px] py-[10px] text-[1.5em]">Next Game</button>
+                <button id="reset" class="bg-lightGreen rounded-[7px] px-[25px] py-[10px] text-[1.5em]">Reset</button>
+            </div>
+        </main>
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
